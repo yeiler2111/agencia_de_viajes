@@ -5,10 +5,11 @@ from typing_extensions import StrictTypeGuard
 from unittest.mock import DEFAULT
 from xmlrpc.client import Boolean
 from xxlimited import Str
+from enum import Enum
 
-
-class flight:
-    id: int
+class flight(Base):
+    
+    id : int
     departuredate: Str
     departureAirportCode: str
     departureAirportName: Str
@@ -23,18 +24,14 @@ class flight:
     ticketCurrency:str
     flightNumber: int
     seatCapacity:int
-    
-    
 
-def BookingStatus(a):
-    if a==0:
-        return "UNCONFIRMED"
-    elif a==1:
-        return "CONFIRMED"
-    elif a==2:
-        return "CANCELLED"
-    else:
-        print("numero incorrecto. el estado de validacion no es correcto")
+"""class bookingStatus(str, int):
+    CONFIRMED = 'CONFIRMED'
+    UNCONFIRMED='UNCONFIRMED'
+    CANCELLED='CANCELLED
+    
+"""
+    
        
 class User:
     id: int
