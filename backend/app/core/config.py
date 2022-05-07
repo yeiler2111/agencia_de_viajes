@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     DATABASE_PASSWORD: str = '2111'
     DATABASE_HOST: Str = 'localhost'
     DATABASE_NAME: str = 'mydb'
-    DATABASE_URI: str = f"postgresql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}/{DATABASE_NAME}"
+    DATABASE_URI: str = f"postgresql://{DATABASE_USERNAME}:{DATABASE_PASSWORD}@{DATABASE_HOST}:5433/{DATABASE_NAME}"
     
     class config:
         case_sensitive: bool=True
