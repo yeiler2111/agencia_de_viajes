@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship
 from backend.app import user
 from database.session import Base
 from enum import Enum
+
 class User(Base):
     __tablename__="user"
     id = column(integer, primary_key=True, autoincrement = True)
