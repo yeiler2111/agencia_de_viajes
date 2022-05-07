@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 from app.user.models import User
 from datetime import datetime
-from app.database.db import Base
+from app.database.mydb import Base
 from app.catalog.models import Flight
 
 
